@@ -70,17 +70,13 @@ Universal Fowarder forward the data into the Main System(Windows 11) where Splun
 
 # Detection Usecases
 
-| Usecase                                               |    See Here                                             |
+| Usecase                                               |    See Here                                                |
 |
-|Brute Force Followed by Privileged Logon               |  [See Report](reports/REPORT-1-Brute-force-Detection.md)|
-|
-|Suspicious Login Times - After Hours Admin Activity    |
-|
-|Lateral Movement Attempt via RDP                       |
-|
-|Log Tampering Simulation                               |
-|
-|Hidden User Account Creation                           |
-|
+|-------------------------------------------------------|------------------------------------------------------------|
+|Brute Force Followed by Privileged Logon               |  [See Report](reports/REPORT-1-Brute-force-Detection.md)   |
+|Suspicious Login Times - After Hours Admin Activity    |                                                            |
+|Lateral Movement Attempt via RDP                       |                                                            |
+|Log Tampering Simulation                               |                                                            |
+|Hidden User Account Creation                           |                                                            |
 
 
