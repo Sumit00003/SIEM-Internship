@@ -35,10 +35,15 @@ After some attempt he successfully login into the System.
 # Detection Query / Logic:
 
 Splunk SPL :-
+
 => index=* 4625 Failure Audit earliest=-30m 
+
 | table Account_Name, _time 
+
 | bin _time span=1m 
+
 | stats count by Account_Name, _time 
+
 | where count > 5
 
 
