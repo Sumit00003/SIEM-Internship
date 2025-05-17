@@ -33,7 +33,7 @@ After some attempt he successfully login into the System.
 
 # Detection Query / Logic:
 
-spl
+- spl
 
 => index=* 4625 Failure Audit sshd.exe  
 | table Account_Name, Caller_Process_Name  
@@ -75,7 +75,7 @@ Right After Guessing the correct password,  attacker has successfully access the
 2) Possible False Positives ?
 
 -> Users may forgot the password.  
--> Penetration Test(if red taem is active).
+-> Penetration Test(if red team is active).
 
 
 # Detection Status
