@@ -17,9 +17,7 @@ After some attempt he successfully login into the System.
 # Tools Used:
 
 -SIEM : Splunk Free  
-
 -Log Source : Windows Security Event Logs  
-
 -Lab Setup : The Virtual Window Machine(Victim or Target) and Kali Linux(Attacker) on the same subnet. 
              Hydra is used to simulate Brute-force attacks over SSH. 
              Windows log collection configured using Splunk Universal Forwarder.
@@ -38,13 +36,9 @@ After some attempt he successfully login into the System.
 Splunk SPL :-
 
 => index=* 4625 Failure Audit sshd.exe  
-
 | table Account_Name, Caller_Process_Name  
-
 | bin _time span=1m  
-
 | stats count by Account_Name, Caller_Process_Name  
-
 | where count > 5
 
 
