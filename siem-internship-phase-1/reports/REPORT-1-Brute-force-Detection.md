@@ -49,7 +49,8 @@ Splunk SPL :-
 
 # Sample Alert Screenshot
 
-![Brute Detection](<../screenshorts/Screenshot 2025-05-17 130801-1.png>)
+![Brute Detection](<../logs/Screenshot 2025-05-17 104229.png>)
+>)
 
 In the Above image, User(IP:192.168.0.104) has brute force using a single "sshuser" Account 
 as the username with multiple passwords.
