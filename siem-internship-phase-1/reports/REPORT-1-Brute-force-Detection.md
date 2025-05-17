@@ -33,7 +33,7 @@ After some attempt he successfully login into the System.
 
 # Detection Query / Logic:
 
-Splunk SPL :-
+spl
 
 => index=* 4625 Failure Audit sshd.exe  
 | table Account_Name, Caller_Process_Name  
