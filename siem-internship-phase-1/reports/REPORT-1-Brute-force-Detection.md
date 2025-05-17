@@ -1,20 +1,20 @@
 
 
-Detection Usecase : Brute Force Followed by Privileged Logon
+# Detection Usecase : Brute Force Followed by Privileged Logon
 
 
-Description: 
+# Description: 
 Attacker or Malicious Person attemps to gain access to a Windows System by rapidly trying multiple passwords with a single username.
 After Several Failed Logon attempt ,a successful login may occur if credentials are guessed correctly.
 
 
-Objective:
+# Objective:
 To identify Brute-Force login attempts from a remote users using ssh service(e.g., Event_ID 4624)
 from the same user within a short time window(e.g.,1 minute).
 After some attempt he successfully login into the System.
 
 
-Tools Used:
+# Tools Used:
 -SIEM : Splunk Free
 -Log Source : Windows Security Event Logs 
 -Lab Setup : The Virtual Window Machine(Victim or Target) and Kali Linux(Attacker) on the same subnet. 
@@ -22,7 +22,7 @@ Tools Used:
              Windows log collection configured using Splunk Universal Forwarder.
 
 
-Event ID / Data Source Mapping:
+# Event ID / Data Source Mapping:
 
 |Source                  | EventCode | Description                |
 |------------------------|-----------|----------------------------|
@@ -30,7 +30,7 @@ Event ID / Data Source Mapping:
 |WinEventLog:Security    | 4624      | Successfully Logged On     |
 |                        |           |                            |
 
-Detection Query / Logic:
+# Detection Query / Logic:
 
 Splunk SPL :-
 => index=* 4625 Failure Audit earliest=-30m 
@@ -40,7 +40,7 @@ Splunk SPL :-
 | where count > 5
 
 
-Sample Alert Screenshot
+# Sample Alert Screenshot
 
 ![Brute Detection](<../screenshorts/Screenshot 2025-05-17 130801-1.png>)
 
@@ -58,7 +58,7 @@ Right After Guessing the correct password,  attacker has successfully access the
 ![Successful Logon 2](<../logs/Screenshot 2025-05-17 111313.png>)
 
 
-Analyst Notes / Recommendations:
+# Analyst Notes / Recommendations:
 
 1) What Should an Analyst do ? 
 -> Investigate the Source IP and user. Check if login was expected, verify with the User.
@@ -70,7 +70,7 @@ Analyst Notes / Recommendations:
 -> Penetration Test(if red taem is active).
 
 
-Detection Status
+# Detection Status
     - Successfully Triggered.
 
 
