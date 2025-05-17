@@ -55,6 +55,7 @@ Network Diagram:
 
 As a Log Source, Virtual Windows Machine is used. For Log Capturing it use:
 1) Splunk Universal Fowarder + Sysmon
+   
 ![Sysmon](<screenshorts/Screenshot 2025-05-15 125229.png>)
 ![Forwarder](<screenshorts/Screenshot 2025-05-17 130801-1.png>)
 
