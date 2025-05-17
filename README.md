@@ -7,4 +7,4 @@ This internship provide challenge-driven learning  and focused on hands-on imple
 
 # Phases
 
-Phase 1: SIEM Foundation - Building Your Cyber Defense Lab - 
+Phase 1: SIEM Foundation - Building Your Cyber Defense Lab - siem-internship-phase-1
