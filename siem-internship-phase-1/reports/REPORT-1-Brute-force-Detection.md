@@ -35,7 +35,8 @@ After some attempt he successfully login into the System.
 
 # Detection Query / Logic:
 
-```spl index=* 4625 Failure Audit sshd.exe 
+```
+spl index=* 4625 Failure Audit sshd.exe 
 | table Account_Name, Caller_Process_Name 
 | bin _time span=1m 
 | stats count by Account_Name, Caller_Process_Name 
