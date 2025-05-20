@@ -39,7 +39,8 @@ After some attempt he successfully login into the System.
 | table Account_Name, Caller_Process_Name 
 | bin _time span=1m 
 | stats count by Account_Name, Caller_Process_Name 
-| where count > 5```
+| where count > 5
+```
 
 
 # Sample Alert Screenshot
