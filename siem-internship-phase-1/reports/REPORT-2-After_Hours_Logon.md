@@ -39,6 +39,9 @@ To identify a logon attempts from any privileged accounts when the network activ
 
 # Sample Alert Screenshot
 
+![1](<../logs/Screenshot 2025-05-17 154312.png>)  
+![2](<../logs/Screenshot 2025-05-17 203201.png>)  
+![3](<../logs/Screenshot 2025-05-17 204804.png>)
 
 
 # Analyst Notes / Recommendations:
