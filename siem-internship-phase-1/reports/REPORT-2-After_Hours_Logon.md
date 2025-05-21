@@ -4,18 +4,18 @@
 
 
 # Description: 
-Monitor Successful Login Attempt After Business Hours(9 AM - 7 PM).
+Monitoring a Successful Login Attempt After Business Hours(9 AM - 7 PM).
 
 
 # Objective:
-To identify a logon attempts from any privileged accounts when the network activity is down.
+To identify a logon attempts from any privileged accounts when the network activity is not active.
 
 
 # Tools Used:
 
 -SIEM : Splunk Free
 
--Log Source : Windows Security Event Logs 
+-Log Source : Windows Security Event Logs, Wireshark Logs
 
 -Lab Setup : The Virtual Window Machine(Victim or Target) and Kali Linux(Attacker) on the same subnet.  
              Windows log collection configured using Splunk Universal Forwarder.  
@@ -27,21 +27,19 @@ To identify a logon attempts from any privileged accounts when the network activ
 |Source                  | EventCode | Description                |
 |------------------------|-----------|----------------------------|
 |WindowsEventLog         | 4624      | Successfully Logged On     |
-|                        |           |                            |
+
 
 # Detection Query / Logic:
 
-```
-spl index=main EventCode=4624  
+```spl index=main EventCode=4624  
 | eval logon_hour = strftime(_time, "%H")   
 | where (logon_hour < 9 OR logon_hour >= 19)  
-| table _time, Account_Name, host, Source_Network_Address, logon_hour
-```
+| table _time, Account_Name, host, Source_Network_Address, logon_hour```
 
 
 # Sample Alert Screenshot
 
-![1](<../logs/Screenshot 2025-05-17 154312.png>)  
+![](<../logs/Screenshot 2025-05-17 154312.png>)  
 ![2](<../logs/Screenshot 2025-05-17 203201.png>)  
 ![3](<../logs/Screenshot 2025-05-17 204804.png>)
 
@@ -51,7 +49,7 @@ spl index=main EventCode=4624
 1) What Should an Analyst do ? 
 
 -> Validate the Event - Check event Logs, verify timestamp.  
--> Correlate with other logs - Such as Previous Failed Login attempts, Process Creation, Privilege Escalation.    
+-> Correlate with other logs - Such as Previous Failed Login attempts, Process Creation.    
 -> If Unauthorized  - For Temporary Period of time disable user account.  
 -> Report & Document.
 
