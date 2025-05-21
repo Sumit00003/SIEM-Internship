@@ -52,15 +52,15 @@ index=* EventCode=104 source="WinEventLog:System"
 
 1) What Should an Analyst do ? 
 
--> Verify the Tampering - Check event Logs, Identify affected system, verify timestamp.
--> Isolate the affected System.
--> Collect Evidence for it from other sources(e.g.,Firewall) and Correlate the source.
+-> Verify the Tampering - Check event Logs, Identify affected system, verify timestamp.  
+-> Isolate the affected System.  
+-> Collect Evidence for it from other sources(e.g.,Firewall) and Correlate the source.  
 -> Report & Document the Incident.
 
 2) Possible False Positives ?
 
 -> Admin Work - Maintenance.  
--> A User might run a scripts with higher privilege that unintentionally cleared the logs.
+-> A User might run a scripts with higher privilege that unintentionally cleared the logs.  
 -> Logs might get overwritten due to size limit, it appears like detection but its just old logs overwritten.  
 
 
