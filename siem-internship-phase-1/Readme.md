@@ -61,6 +61,8 @@ Universal Fowarder forward the data into the Main System(Windows 11) where Splun
 
 # Detection Usecases
 
+(For Usecase 3 RDP, due to storage issues not able to download another virtual windows and also not able to use RDP because the virtual windows 11 was not supporting it. Solution used => Used Kali Linux as 2nd virtual machine and used SMB instead of RDP).
+
 | Usecase                                               | See Here                                                       |
 |-------------------------------------------------------|----------------------------------------------------------------|
 | Brute Force Followed by Privileged Logon              | [See Report 1](reports/REPORT-1-Brute-force-Detection.md)      |
