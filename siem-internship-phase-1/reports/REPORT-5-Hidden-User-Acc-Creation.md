@@ -1,6 +1,6 @@
 
 
-# Detection Usecase 5 : Hidden User Account Creationn
+# Detection Usecase 5 : Hidden User Account Creation
 
 
 # Description: 
@@ -35,7 +35,8 @@ To identify a new account creation and privilege escalation event done by an una
 
 # Detection Query / Logic:
 
-```spl (Alert)
+```
+spl (Alert)
 index=main EventCode=4720  
 | eval logon_hour = strftime(_time, "%H")   
 | where (logon_hour < 9 OR logon_hour >= 19)  
@@ -71,6 +72,6 @@ index=main EventCode=4720
 -> Penetration Testing.
 
 # Detection Status
-    - Successfully Triggered.
+-> Successfully Triggered.
 
 
