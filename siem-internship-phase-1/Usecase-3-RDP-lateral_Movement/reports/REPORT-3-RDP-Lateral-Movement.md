@@ -70,6 +70,6 @@ EventCode=4624 OR EventCode=3
 
 
 # Detection Status
- -> Successfully Triggered.
+ -> Detection Tested.
 
 
