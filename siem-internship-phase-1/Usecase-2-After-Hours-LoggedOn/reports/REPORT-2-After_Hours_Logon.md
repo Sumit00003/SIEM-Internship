@@ -31,10 +31,12 @@ To identify a logon attempts from any privileged accounts when the network activ
 
 # Detection Query / Logic:
 
-```spl index=main EventCode=4624  
+```spl
+index=main EventCode=4624  
 | eval logon_hour = strftime(_time, "%H")   
 | where (logon_hour < 9 OR logon_hour >= 19)  
-| table _time, Account_Name, host, Source_Network_Address, logon_hour```
+| table _time, Account_Name, host, Source_Network_Address, logon_hour
+```
 
 
 # Sample Alert Screenshot
@@ -60,6 +62,6 @@ To identify a logon attempts from any privileged accounts when the network activ
 
 
 # Detection Status
-    - Successfully Triggered.
-
+  -> Alert Triggered.
+  -> Detection Tested
 
