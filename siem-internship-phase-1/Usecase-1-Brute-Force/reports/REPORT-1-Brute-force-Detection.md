@@ -69,17 +69,17 @@ Right After Guessing the correct password,  attacker has successfully access the
 
 1) What Should an Analyst do ? 
 
--> Investigate the Source IP and user. Check if login was expected, verify with the User.
--> If Suspicious try to isolate the host from network.
+-> Investigate the Source IP and user. Check if login was expected, verify with the User.  
+-> If Suspicious try to isolate the host from network.  
 -> Block the Source IP for Temporary Period of Time and report to escalated authority.
 
 2) Possible False Positives ?
 
--> Users may forgot the password.
+-> Users may forgot the password.  
 -> Penetration Test(if red taem is active).
 
 
 # Detection Status
- -> Successfully Triggered.
+ -> Detection Tested.
 
 
