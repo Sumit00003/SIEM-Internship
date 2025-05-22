@@ -7,5 +7,4 @@ This internship provide challenge-driven learning  and focused on hands-on imple
 
 # Phases
 
-Phase 1: SIEM Foundation - Building Your Cyber Defense Lab - [siem-internship-phase-1
-](https://github.com/Sumit00003/SIEM-Internship/tree/a17527edcf25ec1854f232b07e7da7e3cbcefff9/siem-internship-phase-1)
+Phase 1: SIEM Foundation - Building Your Cyber Defense Lab - https://github.com/Sumit00003/SIEM-Internship/tree/cd0868341532798c2aeecbd7099c2ef7edbc8e5e/siem-internship-phase-1
