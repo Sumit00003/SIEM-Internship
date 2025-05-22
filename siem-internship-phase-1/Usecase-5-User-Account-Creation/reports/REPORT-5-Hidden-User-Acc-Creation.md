@@ -1,6 +1,6 @@
 
 
-# Detection Usecase 5 : Hidden User Account Creationn
+# Detection Usecase 5 : Hidden User Account Creation
 
 
 # Description: 
@@ -59,18 +59,18 @@ index=main EventCode=4720
 1) What Should an Analyst do ? 
 
 -> Validate the Event - Who Created the User, When it was created - In Business Hours or Not.  
--> Correlate with other logs - Such as Previous Failed Login attempts or login attempts, Process Creation.
+-> Correlate with other logs - Such as Previous Failed Login attempts or login attempts, Process Creation.  
 -> If Unauthorized  - For Temporary Period of time disable user account.  
--> Report & Document.
+-> Report & Document.  
 -> Improve the Detection through alerts.
 
 2) Possible False Positives ?
 
 -> System Administrators may create new employee accounts.  
--> Software Installations - SQL Server, OpenSSH create local service account during install.
+-> Software Installations - SQL Server, OpenSSH create local service account during install.  
 -> Penetration Testing.
 
 # Detection Status
-    - Successfully Triggered.
+  -> Detection Tested.
 
 
