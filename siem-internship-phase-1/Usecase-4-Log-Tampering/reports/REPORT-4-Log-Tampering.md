@@ -28,7 +28,7 @@ To identify a unauthorized Log Tampering attempts from any account in the networ
 
 |Source                  | EventCode | Description                       |
 |------------------------|-----------|-----------------------------------|
-| WinEventLog : Security | 3         | Successfully Logged on via SSH    |
+| WinEventLog : Sysmon   | 3         | Successfully Logged on via SSH    |
 | WinEventLog : Sysmon   | 1         | Process Creation                  |
 | WinEventLog : System   | 104       | Log Clear                         |
 | WinEventLog : Security | 4634      | Account Logged off                | 
