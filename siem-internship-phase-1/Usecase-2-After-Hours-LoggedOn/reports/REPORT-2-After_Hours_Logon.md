@@ -62,6 +62,6 @@ index=main EventCode=4624
 
 
 # Detection Status
-  -> Alert Triggered.
+  -> Alert Triggered.  
   -> Detection Tested
 
