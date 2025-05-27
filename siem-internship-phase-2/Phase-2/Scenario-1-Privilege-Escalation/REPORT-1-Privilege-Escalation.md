@@ -1,6 +1,6 @@
 
 
-# Detection Usecase 2 : Privilege Escalation Attempt
+# Detection Usecase 1 : Privilege Escalation Attempt
 
 
 # Scenario Summary: 
@@ -8,10 +8,10 @@ Monitoring a non-admin user tries to login to the system through ssh and attemps
 in the system and try to escalate the privilege by adding it to administrators group and then logged off the system.
 
 # Attack Steps:
-Here, Virtual Wiindows 11 is the victim where universal forwarder is running,  
-and  Virtual Kali Linux is the attacker.
+Here, Virtual Windows 11 is the victim where universal forwarder is running,  
+and Virtual Kali Linux is the attacker.
 
-- The Attack was simulated by Kali Linux as follows:  
+- The Attack was simulated by Kali Linux on Windows as follows:  
 1) Attacker Login to Victim Machine via SSH  
 ```
 ssh sshuser@<10.10.99.77>
@@ -59,24 +59,23 @@ index=* (EventCode=4728 OR EventCode=4720)
 # Sample Alert Screenshot
 
 1) Attacker Login here using SSH.  
-![Login](<../logs/Screenshot 2025-05-22 163524.png>)  
-![Login 2](<../logs/Screenshot 2025-05-22 164358.png>)
+![Login](<logs/Screenshot 2025-05-22 163524.png>)  
+![Login 2](<logs/Screenshot 2025-05-22 164358.png>)
 
 2) Attacker Run command : whoami, net.exe  
-![whoami](<../logs/Screenshot 2025-05-22 164821.png>)  
-![net1](<../logs/Screenshot 2025-05-22 165027.png>)  
-![net2](<../logs/Screenshot 2025-05-22 165804.png>)
+![whoami](<logs/Screenshot 2025-05-22 164821.png>)  
+![net1](<logs/Screenshot 2025-05-22 165027.png>)  
+![net2](<logs/Screenshot 2025-05-22 165804.png>)
 
 3) Account was created and escalated  
-![backdoor](<../logs/Screenshot 2025-05-22 163743.png>)  
-![alt text](<../logs/Screenshot 2025-05-22 163109.png>)
+![backdoor](<logs/Screenshot 2025-05-22 163743.png>)  
+![alt text](<logs/Screenshot 2025-05-22 163109.png>)
 
 4) User was logged off  
-![loggedoff](<../logs/Screenshot 2025-05-22 165923.png>)
+![loggedoff](<logs/Screenshot 2025-05-22 165923.png>)
 
 5) Alert  
-![alert](<../screenshot/Screenshot 2025-05-22 173045.png>)
-s
+![alert](<screenshot/Screenshot 2025-05-22 173045.png>)
 
 # Analyst Notes / Recommendations:
 
@@ -87,9 +86,6 @@ s
 -> Make an alert if some non-admin tries to create user or tries to escalate it.  
 -> Report & Document.
 
-2) Possible False Positives ?
-
--> Penetration Test(if red taem is active).
 
 # Detection Status
  -> Successfully Detected.  
