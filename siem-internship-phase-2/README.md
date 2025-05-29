@@ -65,7 +65,7 @@ List of Tools Used:
 
 List of Tools Used:
 
-* Victim Machine – Windows 7    
+* Victim Machine – Windows 10    
 * Attacker Machine - Kali Linux. 
 * Tools - WinPEASx64, Crackmapexec, Powershell-Empire, Mimikatz, schtasks, SSH, smbclient, PowerShell
 
