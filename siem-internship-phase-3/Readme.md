@@ -13,7 +13,7 @@ candidates to detect, analyze, and respond using a layered defense strategy.
 
 List of Tools Used:
 
-* Hacking Tools - Powershell Scripts, Fileless Malware, Metasploit, Mimikatz.
+* Hacking Tools - Powershell Scripts, Fileless Malware, Metasploit, Mimikatz, Python Scripts, msfvenom.  
 * VMWare – Windows 11 and Kali Linux  
 * SIEM – Splunk Enterprise Free(In Main System)  
 
